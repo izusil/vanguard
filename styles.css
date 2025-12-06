@@ -474,7 +474,7 @@ table {
     nav a:hover, nav a:focus {
         color: var(--black);
         background-color: var(--blue);
-        transition: all .5 ease-in;
+        transition: all .5s ease-in;
     }
 
     input {
