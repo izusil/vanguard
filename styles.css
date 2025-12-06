@@ -1,7 +1,7 @@
-/* CSS BY YOUR NAME */
+/* CSS BY IZUMI */
 
 /* IMPORTED FONTS*/
-/* IMPORT "INTER" FROM GOOGLE FONTS"
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 /* CSS RESET */
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -66,6 +66,253 @@ table {
 
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
 
+@media (min-width: 400px)  {
+    html {
+       font-family: var(--font);
+       font-size: .85rem;
+       background: var(--black);
+       width: 100%;
+       min-width: 400px;
+    }
+
+    header { 
+        display: grid;
+        grid-template-columns: 2fr 1fr;               
+        background-color: var(--black);
+        border-bottom: solid 5px  var(--blue);
+    }
+
+    /* I can't get the box shadow to work */
+
+    h1, h2, h3 {
+        transform: translate(0px, 10px);
+        transition: all .5s ease-out;
+    }
+
+
+    h1 {
+        display: inline-flex;
+        color: var(--blue);
+        font-size: 2.5rem;
+        font-weight: 800;
+        padding: 2rem;
+        
+    }
+
+@media (min-width: 400px) and (max-width: 800px) {
+    nav {
+        background: var(--black);
+    } 
+        nav ul {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            overflow: hidden;
+            text-align: center;
+            max-height: 0px;
+        }
+
+        nav li a {
+            display: block;
+            text-decoration: 0;
+            font-size: 1.5rem;
+            padding: 1rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            transition: background-color .3s ease-in;
+
+        }
+
+        nav h2 {
+            visibility: hidden;
+            height: 0px;
+        }
+
+        nav a:hover, nav input:hover {
+        background-color: var(--blue);
+        color: var(--black);
+    }
+
+    nav label {
+        
+        cursor: pointer;
+        display: inline-block;
+        padding-left: 10rem;
+        padding-top: .25rem;
+        user-select: none;
+    }
+
+    label span {
+        background-color: var(--white);
+        display: block;
+        height: .25rem;
+        position: relative;
+        transition: background-color .3s ease-out;
+        width: 2rem;
+    }
+
+    label span:before, label span:after {
+        background: var(--white);
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+    label span:before {
+        top: .75rem;
+    }
+    label span:after {
+        top: -.75rem;
+    }
+    nav input {
+    display:none;
+    }
+
+    input:checked ~ ul {
+        max-height: 500px;
+    }
+}
+    
+
+
+    #expertise {
+    background: var(--white);
+    color: var(--black);
+    line-height: 1.5rem;
+    
+}
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        padding: 2rem;
+    }
+
+    #expertise p {
+        padding: 1rem;
+        padding-top: 0;
+
+    }
+
+    #offer section {
+        background: var(--blue);
+        color: var(--white);
+        margin: 1.5rem;
+        padding: 1.5rem;
+        border-radius: 10px;
+        line-height: 1.5rem;
+        transition: transform .3s ease-in-out;
+    }
+
+    #offer section:hover {
+        transform: translate(0px, -15px);
+        
+    }
+
+    #offer section:last-child {
+        margin-bottom: 5rem;
+    }
+
+    #offer h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding: 1rem;
+    }
+
+    #offer p {
+        padding: .25rem;
+        
+    }
+
+
+
+    #results-proven {
+        background: var(--blue);
+        color: var(--white);
+        padding: 1rem;
+    }
+
+    #results-proven h3 {
+        color: var(--white);
+        font-size: 2rem;
+        font-weight: 700;
+        padding: 2rem;
+    }
+
+    table {
+        table-layout: fixed;
+        width: 90%;
+        margin: 1rem auto;
+        border-collapse: collapse;
+        background: var(--black);
+        text-align: center;
+        
+    }
+
+    th, td {
+        padding: 1rem;
+        vertical-align: top;
+        border: var(--charcoal) 1px solid;
+    }
+
+    tbody tr:nth-child(even) {
+        background: var(--charcoal);
+    }
+
+    form {
+        background: var(--black);
+        color: var(--white);
+        padding: 1rem;
+    }
+
+    input, textarea {
+        display: block;
+        width: 90%;
+        padding: 1rem;
+        margin: 2rem auto;
+        margin-top: 0;
+        box-sizing: border-box;
+        border: var(--blue) 2px solid;
+        overflow: auto;
+    }
+
+    label {
+        padding: 2rem;
+        font-size: 1.1rem;
+    }
+
+    input[type="submit"] {
+        background:var(--blue);
+        color: var(--white);
+        font-size: 1.25rem;
+        font-weight: 600;
+        border-radius: 10px;
+    }
+
+    input[type="submit"]:focus,  input[type="submit"]:hover {
+        background-color: var(--red);
+        border: none;
+        transform: scale(1.1);
+        transition: all .1s ease-in;
+    }
+
+    footer {
+        color: var(--white);
+        text-align: center;
+        line-height: 1.5rem;
+        padding: 2rem;
+    }
+
+    footer a {
+        color: var(--blue);
+
+    }
+
+}
+
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
     width: 90%;
@@ -74,7 +321,7 @@ table {
 }
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
- {
+#innovation {
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
     height: 80vh;
     display: grid;
@@ -84,10 +331,42 @@ table {
     overflow: hidden;
 }
 
-/* ADD FLOATING SVG LOGO BEFORE THE H1 */
- {
-    content: "";
+#innovation h2 {
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 700;
+    
+}
 
+#innovation p {
+    color: var(--white);
+    line-height: 1.5rem;
+    padding: 2rem;
+    padding-top: .5rem;
+    margin: 0 10rem;
+}
+
+#innovation a {
+    background:var(--blue);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+ 
+}
+
+#innovation a:hover {
+    background: var(--red);
+    transform: scale(1.1);
+       transition: all .1s ease-in;
+}
+
+
+/* ADD FLOATING SVG LOGO BEFORE THE H1 */
+ h1::before {
+    content:" ";
     left:-.5rem;
     width: 3.75rem;
     height: 3.75rem;
@@ -113,7 +392,7 @@ table {
     background: var(--charcoal);
     border-radius: 10px;
     position: relative;
-    transition: ;
+    transition: transform 5s ease-in;
     height: 0;
 }
 /* THIS ONE IS DONE FOR YOU */
@@ -144,18 +423,65 @@ table {
 /* MEDIA QUERIES (MEDIUM) */ 
 @media screen and (min-width: 800px) {
     #results {
+        display: grid;
         grid-template-columns: 1fr 1fr;
     }
     .results-container {
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
+        padding: 2rem;
     }
-    .results-table {
-        width: 50%;
-    }
+
     .bar-chart {
         width: 50%;
     }
+
+    .results-container {
+        width: 80%;
+    }
+
+    #offer section {
+            margin: 0;
+        }
+
+    #offer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 2.5rem;
+        gap: 1rem;
+
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    nav a {
+        text-decoration: none;
+        font-size: 2rem;
+        color: var(--blue);
+        padding: .5rem;
+        font-weight: 600;
+        margin: 1rem;
+    }
+
+    nav h2 {
+        display: none;
+    }
+
+    nav a:hover, nav a:focus {
+        color: var(--black);
+        background-color: var(--blue);
+        transition: all .5 ease-in;
+    }
+
+    input {
+        visibility: hidden;
+    }
+
+   
 }
 
     
@@ -164,5 +490,44 @@ table {
 /* MEDIA QUERIES (LARGE) */
 
 @media screen and (min-width: 1024px) {
-    
+
+    header, main, footer {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    #offer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+        #results {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .results-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem;
+    }
+
+    .bar-chart {
+        width: 100%;
+    }
+
+    .results-container {
+        width: 90%;
+    }
+
+    .form-contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    /* The form inputs disappear once the browser is at max size and I have no idea why that's happening */
+    /* Additionally, I had no idea everything was so small in Chrome. I've been using FireFox to check the result. */
+
+
 }
